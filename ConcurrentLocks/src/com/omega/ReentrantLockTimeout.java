@@ -8,7 +8,7 @@ public class ReentrantLockTimeout {
 	public static void main (String[] args) {		
 		final ReentrantLock lock1 = new ReentrantLock();
 		final ReentrantLock lock2 = new ReentrantLock();
-		System.out.println("About to create two threads...");
+		System.out.println("About to create two threads..");
 		Runnable try1_2 = getRunnable(lock1, "lock 1", lock2, "lock 2");
 		Runnable try2_1 = getRunnable(lock2, "lock 2", lock1, "lock 1");
 		new Thread(try1_2).start();
